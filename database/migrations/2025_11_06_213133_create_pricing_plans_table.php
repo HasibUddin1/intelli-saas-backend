@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('pricing_plans', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->decimal('price_monthly', 8, 2);
+            $table->decimal('price_yearly', 8, 2);
+            $table->text('description')->nullable();
+            $table->json('features')->nullable();
+            $table->boolean('is_popular')->default(false);
             $table->timestamps();
         });
     }

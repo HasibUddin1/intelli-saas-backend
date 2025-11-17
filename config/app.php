@@ -123,4 +123,10 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    // JSON Web Token Settings
+    'providers' => [
+        
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+    ]
+
 ];
